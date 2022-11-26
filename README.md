@@ -4,14 +4,31 @@
 * State is similar to props but unlike props, it is private to a component and is controlled solely by the said component. 
 
 ```javascript
-class Greeting extends React.Component {  constructor(props) {
+class Greeting extends React.Component {  
+   constructor(props) {
    super(props);
      // Define your state object here
      this.state = {
-       name: ‘Jane Doe’
+       name: "Jane Doe",
+       buttonText: "Click ME!"
      }
-   }   render(){
-     return <h1>Hello { this.state.name }</h1>;
+   }  
+   Buttonchange = () => {
+      this.setState({
+      
+       buttonText: "you have Clicked ME!"
+      })
+   }
+   render(){
+     return (
+     <div>
+      <h1>Hello { this.state.name }</h1>
+      <button onClick={this.Buttonchange}>{this.state.buttonText}</button>
+     </div>
+     ) ;
    }
 }
 ```
+
+* State is initiated using this.state, however, all subsequent changes to state are made using this.setState. Using this.setState ensures that the components affected by the change in state are re-rendered in the browser.
+
