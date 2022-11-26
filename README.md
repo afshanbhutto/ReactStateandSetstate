@@ -32,5 +32,5 @@ class Greeting extends React.Component {
 
 * State is initiated using this.state, however, all subsequent changes to state are made using this.setState. Using this.setState ensures that the components affected by the change in state are re-rendered in the browser.
 
-![]{src/components/images/screenshot.PNG}
+![screenshot](https://user-images.githubusercontent.com/64063271/204078271-55a7759c-fd2d-41a0-b89b-16f41aef0a91.PNG)
 
